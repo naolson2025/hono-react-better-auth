@@ -1,0 +1,15 @@
+{
+  "name": "hono-react-better-auth",
+  "scripts": {
+    "server": "bun run --hot server/index.ts",
+    "client": "cd client && bun run dev",
+    "dev": "concurrently \"bun run server\" \"bun run client\""
+  },
+  "dependencies": {
+    "hono": "^4.9.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^9.2.0"
+  }
+}

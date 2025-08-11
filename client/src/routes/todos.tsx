@@ -22,14 +22,13 @@ function RouteComponent() {
 
   return (
     <div className="flex flex-col items-center p-10">
-      <div className="space-y-3">
-        {isError && (
-          <div role="alert" className="alert alert-error">
-            <CircleX />
-            <span>Error: {error.message}</span>
-          </div>
-        )}
-
+      {isError && (
+        <div role="alert" className="alert alert-error">
+          <CircleX />
+          <span>Error: {error.message}</span>
+        </div>
+      )}
+      <div className="space-y-3 p-6">
         {isLoading && (
           <>
             {[1, 2, 3, 4, 5].map(() => (

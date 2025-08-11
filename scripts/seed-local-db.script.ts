@@ -4,6 +4,13 @@ import { seed } from 'drizzle-seed';
 
 const seedDb = async () => {
   await seed(db, schema).refine((funcs) => ({
+    user: {
+      columns: {},
+      count: 10,
+      with: {
+        todos: 10,
+      },
+    },
     todos: {
       columns: {
         title: funcs.valuesFromArray({

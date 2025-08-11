@@ -15,6 +15,13 @@
       "when": 1754874088899,
       "tag": "0001_lucky_korath",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1754938727769,
+      "tag": "0002_strange_white_tiger",
+      "breakpoints": true
     }
   ]
 }

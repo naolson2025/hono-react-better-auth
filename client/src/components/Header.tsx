@@ -1,15 +1,29 @@
 import { Link } from '@tanstack/react-router'
+import { LogIn } from 'lucide-react'
 
 export default function Header() {
   return (
-    <header className="p-2 flex gap-2 bg-white text-black justify-between">
-      <nav className="flex flex-row">
-        <div className="px-2 font-bold">
-          <Link to="/">Home</Link>
+    <header className="bg-base-300">
+      <nav className="navbar">
+        <div className="navbar-start">
+          <div className="px-2">
+            <Link to="/" activeProps={{ className: 'font-bold text-primary' }}>
+              Home
+            </Link>
+          </div>
+
+          <div className="px-2">
+            <Link
+              to="/todos"
+              activeProps={{ className: 'font-bold text-primary' }}
+            >
+              Todos
+            </Link>
+          </div>
         </div>
 
-        <div className="px-2 font-bold">
-          <Link to="/todos">Todos</Link>
+        <div className="navbar-end">
+          <LogIn className="size-4" />
         </div>
       </nav>
     </header>

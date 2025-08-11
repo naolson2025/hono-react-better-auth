@@ -21,7 +21,7 @@ function RouteComponent() {
     router.navigate({ to: '/todos' })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (password !== confirmPassword) {
@@ -32,7 +32,7 @@ function RouteComponent() {
     setLoading(true)
 
     try {
-      authClient.signUp.email({
+      await authClient.signUp.email({
         name,
         email,
         password,

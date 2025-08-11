@@ -1,10 +1,12 @@
 import { Hono } from 'hono';
 import { getTodos } from './db/queries';
+import { auth } from './lib/auth';
 
-const app = new Hono();
+const app = new Hono().basePath('/api');
 
 const router = app
-  .get('/api/todos', async (c) => {
+  .on(['POST', 'GET'], '/auth/**', (c) => auth.handler(c.req.raw))
+  .get('/todos', async (c) => {
     try {
       const todos = await getTodos();
       return c.json(todos);
@@ -13,7 +15,7 @@ const router = app
       return c.json({ error: 'Failed to fetch todos' }, 500);
     }
   })
-  .get('/api/people', (c) => {
+  .get('/people', (c) => {
     return c.json([
       { id: 1, name: 'Alice' },
       { id: 2, name: 'Bob' },

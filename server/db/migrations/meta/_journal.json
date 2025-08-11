@@ -8,6 +8,13 @@
       "when": 1754851835732,
       "tag": "0000_loving_human_robot",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1754874088899,
+      "tag": "0001_lucky_korath",
+      "breakpoints": true
     }
   ]
 }

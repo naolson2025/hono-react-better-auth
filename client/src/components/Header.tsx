@@ -46,6 +46,7 @@ export default function Header() {
             <Link
               to="/todos"
               activeProps={{ className: 'font-bold text-primary' }}
+              disabled={!session}
             >
               Todos
             </Link>

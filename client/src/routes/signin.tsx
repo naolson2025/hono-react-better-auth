@@ -44,7 +44,9 @@ function RouteComponent() {
     <div className="flex items-center justify-center bg-base-100 pt-12">
       <div className="card bg-base-300 max-w-md">
         <div className="card-body p-8">
-          <div className="card-title text-3xl px-4">Welcome back</div>
+          <div className="card-title text-3xl px-4 flex justify-center">
+            Welcome back
+          </div>
           <p className="text-base-content/70 my-2 text-center">
             Sign in to continue
           </p>
